@@ -116,10 +116,10 @@
     <input type="text" id="search" placeholder="Search dorks..." oninput="filterDorks()" />
     <button class="add-btn" onclick="addDork()">➕ Add New Dork</button>
     
-    <input type="text" id="domainInput" placeholder="Enter a domain">
+<!--     <input type="text" id="domainInput" placeholder="Enter a domain">
     <button onclick="generateAIDorks(document.getElementById('domainInput').value)">
         🔍 Generate AI Dorks
-    </button>
+    </button> -->
 
     <div id="dorkList"></div>
 
@@ -240,14 +240,14 @@
                 return;
             }
 
-            console.log("AI-generated Dorks:", data.result);
+        //     console.log("AI-generated Dorks:", data.result);
 
-            // Example: append result to your page dynamically
-            const aiSection = document.getElementById("ai-dorks");
-            if (aiSection) {
-                aiSection.innerHTML = `<h3>🤖 AI-Generated Dorks</h3><pre>${data.result}</pre>`;
-            }
-        }
+        //     // Example: append result to your page dynamically
+        //     const aiSection = document.getElementById("ai-dorks");
+        //     if (aiSection) {
+        //         aiSection.innerHTML = `<h3>🤖 AI-Generated Dorks</h3><pre>${data.result}</pre>`;
+        //     }
+        // }
         
     </script>
 </body>
