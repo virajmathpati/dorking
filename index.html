@@ -231,23 +231,23 @@
         }
         loadDorks();
 
-         async function generateAIDorks(domain) {
-            const res = await fetch(`https://dorking.virajmathpati99.workers.dev?domain=${encodeURIComponent(domain)}`);
-            const data = await res.json();
+        //  async function generateAIDorks(domain) {
+        //     const res = await fetch(`https://dorking.virajmathpati99.workers.dev?domain=${encodeURIComponent(domain)}`);
+        //     const data = await res.json();
 
-            if (data.error) {
-                alert("Error: " + data.error);
-                return;
-            }
-
-        //     console.log("AI-generated Dorks:", data.result);
-
-        //     // Example: append result to your page dynamically
-        //     const aiSection = document.getElementById("ai-dorks");
-        //     if (aiSection) {
-        //         aiSection.innerHTML = `<h3>🤖 AI-Generated Dorks</h3><pre>${data.result}</pre>`;
+        //     if (data.error) {
+        //         alert("Error: " + data.error);
+        //         return;
         //     }
-        // }
+
+        // //     console.log("AI-generated Dorks:", data.result);
+
+        // //     // Example: append result to your page dynamically
+        // //     const aiSection = document.getElementById("ai-dorks");
+        // //     if (aiSection) {
+        // //         aiSection.innerHTML = `<h3>🤖 AI-Generated Dorks</h3><pre>${data.result}</pre>`;
+        // //     }
+        // // }
         
     </script>
 </body>
