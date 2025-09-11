@@ -115,6 +115,11 @@
     <input type="text" id="domain" placeholder="Enter domain (e.g., example.com)" oninput="updateDorks()" />
     <input type="text" id="search" placeholder="Search dorks..." oninput="filterDorks()" />
     <button class="add-btn" onclick="addDork()">➕ Add New Dork</button>
+    
+    <input type="text" id="domainInput" placeholder="Enter a domain">
+    <button onclick="generateAIDorks(document.getElementById('domainInput').value)">
+        🔍 Generate AI Dorks
+    </button>
 
     <div id="dorkList"></div>
 
@@ -224,8 +229,26 @@
                 container.style.display = container.innerText.toLowerCase().includes(keyword) ? '' : 'none';
             });
         }
-
         loadDorks();
+
+         async function generateAIDorks(domain) {
+            const res = await fetch(`https://dorking.virajmathpati99.workers.dev?domain=${encodeURIComponent(domain)}`);
+            const data = await res.json();
+
+            if (data.error) {
+                alert("Error: " + data.error);
+                return;
+            }
+
+            console.log("AI-generated Dorks:", data.result);
+
+            // Example: append result to your page dynamically
+            const aiSection = document.getElementById("ai-dorks");
+            if (aiSection) {
+                aiSection.innerHTML = `<h3>🤖 AI-Generated Dorks</h3><pre>${data.result}</pre>`;
+            }
+        }
+        
     </script>
 </body>
 </html>
